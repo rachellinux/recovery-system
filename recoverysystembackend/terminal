@@ -1,0 +1,24 @@
+mkdir systemrecoveryBackend
+cd systemrecoveryBackend
+npm init -y
+npm install express mongoose dotenv bcryptjs jsonwebtoken cors 
+
+# Remove existing node_modules and package-lock.json (if they exist)
+rm -rf node_modules package-lock.json
+
+# Install dependencies
+npm install
+
+# Or if you want to install exactly what's in package.json
+npm ci 
+
+# Create React project with Vite
+mkdir systemrecoveryFrontend
+cd systemrecoveryFrontend
+npm create vite@latest . -- --template react
+npm install
+
+# Install required dependencies
+npm install @heroicons/react @headlessui/react axios react-router-dom @reduxjs/toolkit react-redux react-hot-toast
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p 

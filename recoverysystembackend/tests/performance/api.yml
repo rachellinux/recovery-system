@@ -1,0 +1,17 @@
+config:
+  target: 'http://localhost:5000/api'
+  phases:
+    - duration: 60
+      arrivalRate: 20
+  defaults:
+    headers:
+      Content-Type: 'application/json'
+
+scenarios:
+  - name: "Browse products and services"
+    flow:
+      - get:
+          url: "/products"
+      - think: 1
+      - get:
+          url: "/services" 
